@@ -9,7 +9,8 @@ export default function Insert() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const existingTasks = JSON.parse(localStorage.getItem('tasks'));
+
+        const existingTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
         const updatedTasks = [...existingTasks, task];
 
